@@ -65,17 +65,17 @@ for i in range(start_index, len(df)):
         
         # calculate form
         form_total = 0
-        n_of_matches = 0
+        # n_of_matches = 0
         current_gameweek = row['gameweek']
         for j in range(1, 4):
             if i-j >= 0 and df.iloc[i-j]['gameweek'] >= current_gameweek-3 and (i-j)>=current_player_starting_index:
                 form_total += df.iloc[i-j]['total']
-                n_of_matches+=1
+                # n_of_matches+=1
 
-        if n_of_matches == 1 or n_of_matches == 2:
-            new_row['current-form'] = form_total / n_of_matches
+        if number_of_matches == 1 or number_of_matches == 2:
+            new_row['current-form'] = form_total / (number_of_matches * 1.0)
         else:
-            new_row['current-form'] = form_total / 3 
+            new_row['current-form'] = form_total / 3.0 
 
     new_df.loc[i] = new_row
     print new_row
