@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv('../midf_result_files/mid_data.csv')
+df = pd.read_csv('../mid_result_files/mid_data.csv')
 
 rank5=['MCI']
 rank4=['ARS','CHE','EVE','LIV','MUN','TOT']
@@ -35,4 +35,4 @@ for i in range(0,len(df)) :
 	else :
 		df.loc[i, 'opponent']=2
 
-df.to_csv('../midf_result_files/mid_data.csv',index=False)
+df.to_csv('../mid_result_files/mid_data.csv',index=False)

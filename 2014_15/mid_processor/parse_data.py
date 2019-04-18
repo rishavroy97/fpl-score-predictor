@@ -4,7 +4,7 @@ with open('../main_data/14-15.csv', 'r') as main_file:
     
     csv_reader = csv.DictReader(main_file)
 
-    with open('../midf_result_files/names.csv', 'w') as fwd_file:
+    with open('../mid_result_files/names.csv', 'w') as fwd_file:
         fieldnames = ['playerId', 'gameweek', 'name', 'minutes-played', 'team', 'opponent','clean-sheet','goals-scored', 'assists', 'yellow-cards', 'red-cards', 'bonus', 'total']
         csv_writer = csv.DictWriter(fwd_file, fieldnames=fieldnames)
         csv_writer.writeheader()

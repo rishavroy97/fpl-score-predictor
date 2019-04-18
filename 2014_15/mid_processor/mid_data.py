@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv('../midf_result_files/sorted_names.csv')
+df = pd.read_csv('../mid_result_files/sorted_names.csv')
 
 columns = ['mins-pm', 'team', 'opponent', 'cs-pm','goals-pm', 'assists-pm', 'yellow-cards-pm', 'red-cards-pm', 'bonus-pm', 'current-form', 'total']
 new_df = pd.DataFrame(columns=columns)
@@ -88,4 +88,4 @@ for i in range(start_index, len(df)):
     print new_row
 
 print new_df
-new_df.to_csv('../midf_result_files/mid_data.csv', index=False)
+new_df.to_csv('../mid_result_files/mid_data.csv', index=False)
